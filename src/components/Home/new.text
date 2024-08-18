@@ -1,0 +1,32 @@
+import React from 'react';
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
+
+function Content() {
+    const { text, isTyping } = useTypewriter({
+        words: [
+            'Nearest Hospitals',
+            'Vacant Beds',
+            'Best Recommendations',
+            'Estimated Waiting Time',
+            'Available Surgery'
+        ],
+        loop: true, 
+        delay: 2000,
+    });
+
+    
+    console.log('Type of text:', typeof text, 'Text:', text);
+
+    return (
+        <div className='text-pretty font-Raleway font-black leading-[1] tracking-tighter translate-y-[40%] ml-[10%]'>
+            <h1 className='text-[600%]'>FIND</h1>
+            <div className='text-[800%] text-blue-800'>
+                {text || 'Loading...'} <Cursor />
+            </div>
+            <div className='text-[600%]'>SEAMLESSLY AND</div>
+            <div className='text-[600%]'>CONSISTENTLY</div>
+        </div>
+    );
+}
+
+export default Content;

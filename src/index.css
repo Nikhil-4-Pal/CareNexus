@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family:"Regular";
+    src: local("Raleway")
+    url("./assets/fonts/Raleway-Regular.ttf") format('truetype') ;
+}
+
+@font-face {
+    font-family:"Medium";
+    src: local("Raleway")
+    url("./assets/fonts/Raleway-Medium.ttf") format('truetype') ;
+}
+
+
+@font-face {
+    font-family:Raleway ;
+    src: url("./assets/fonts/Raleway-Black.ttf");
+  }
+
+
+  @layer base {
+    .animate-blink {
+      animation: blink 1s step-start infinite;
+    }
+  }
+
+
+  body{
+    background-color:rgb(235, 235, 219);
+  }
