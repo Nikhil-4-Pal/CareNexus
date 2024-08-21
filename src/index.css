@@ -30,5 +30,5 @@
 
 
   body{
-    background-color:rgb(235, 235, 219);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://images.peopleimages.com/picture/202306/2856406-medical-teamwork-and-wellness-collage-of-doctors-in-hospital-for-treatment-collaboration-and-support-staff.-healthcare-medicine-and-help-with-group-of-people-for-diversity-insurance-and-career-fit_400_400.jpg);
   }
