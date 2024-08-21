@@ -4,10 +4,10 @@ import Content from './Content'
 
 function Hero() {
   return (
-    <>
+    <div className=' w-full max-h-max '>
       <Blob/>
       <Content/>
-    </>
+    </div>
   )
 }
 

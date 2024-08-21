@@ -2,8 +2,8 @@ import React from 'react';
 
 function Blob() {
   return (
-    <div className=' top-0 z-[-1] relative translate-y-[10%] flex justify-center  h-[90%] w-full'>
-      <div className='absolute w-[50%] h-[50%]'>
+    <div className=' blur-sm z-[-1] relative flex justify-center -translate-y-[100%]  h-full w-full'>
+      <div className=' absolute w-[50%] h-[50%]'>
         <svg
           viewBox="0 0 500 500"
           xmlns="http://www.w3.org/2000/svg"
@@ -13,8 +13,8 @@ function Blob() {
           <defs>
     
             <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style={{ stopColor: 'rgba(254, 0, 242, 0.6)' }} />
-              <stop offset="100%" style={{ stopColor: 'rgba(251, 2, 128, 0.6)' }} />
+              <stop offset="0%" style={{ stopColor: 'rgba(139, 198, 236, 0.89)' }} />
+              <stop offset="100%" style={{ stopColor: 'rgba(149, 153, 226, 0.89)' }} />
             </linearGradient>
 
             <filter id="glassEffect">

@@ -28,19 +28,21 @@ function CustomTypewriter() {
                     setIndex((index + 1) % words.length);
                 }
             }
-        }, isDeleting ? 100 : 200   );
+        }, isDeleting ? 200 : 100   );
         
         return () => clearTimeout(timeout);
     }, [charIndex, isDeleting, index]);
 
     return (
-        <div className='text-pretty font-Raleway font-black leading-[1] tracking-tighter translate-y-[40%] ml-[10%]'>
-            <h1 className='text-[600%]'>FIND</h1>
-            <div className='text-[800%] text-blue-800'>
+        <div className='text-pretty font-Raleway font-black leading-[1] tracking-tighter translate-y-[5%] ml-[10%]'>
+            <h1 className='text-[550%] text-slate-700 '>CareNexus</h1>
+            <h1 className='text-[550%]'>helps you</h1>
+            <h1 className='text-[550%]'>find...</h1>
+            <div className='text-[800%] text-blue-900  '>
                 {text || 'AND'}
             </div>
-            <div className='text-[600%]'>SEAMLESSLY AND</div>
-            <div className='text-[600%]'>CONSISTENTLY</div>
+            <div className='text-[550%]'>seamlessly and</div>
+            <div className='text-[550%]'>consistently</div>
         </div>
     );
 }
