@@ -8,7 +8,7 @@ function Navbar() {
    
     const Items = ["Vacant Beds","Hospitals","Emergencies",]
   return (
-    <div className=' opacity- mx-auto   flex justify-center items-center justify-between w-full position  px-8 ' >
+    <div className= 'bg-gray-400  bg-opacity-15 absolute z-[999] mx-auto   flex justify-center items-center justify-between w-full   px-8 ' >
         <div className=' text-center font-Raleway grid grid-cols-3 gap-4 self-center ' >
             <Link className=' p-2 rounded-full border-x-2 border-y-2 border-x-black border-y-black '  to='/home' >Home</Link>
             <Link className=' p-2 rounded-full border-x-2 border-y-2 border-x-black border-y-black '  to='/about' >About</Link>

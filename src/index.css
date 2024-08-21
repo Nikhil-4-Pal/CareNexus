@@ -32,3 +32,10 @@
   body{
     background-color:rgb(235, 235, 219);
   }
+
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
