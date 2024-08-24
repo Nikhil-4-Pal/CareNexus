@@ -11,6 +11,7 @@ max-width: 100%;
 min-height: 400px;
 `;
 
+
 export const SignUpContainer = styled.div`
  position: absolute;
  top: 0;
