@@ -36,3 +36,46 @@ export default Content;
  <div className=' absolute backface-hidden rotate-y-180 border-x-2 border-x-black border-y-2 border-y-black text-wrap m-4  flex flex-col justify-center items-center gap-6 rounded-[1.75rem] text-center bg-white w-[28rem] max-h-max p-10 font-Raleway ' >  
               <h1 className='text-2xl' >{cardcontent}</h1>
           </div>
+
+
+
+import React from 'react'
+import PartenerCard from './PartenerCard'
+
+function Partener() {
+  return (
+    <div className=' relative overflow-y-auto no-scrollbar  gap-12 p-8 flex flex-col justify-center items-center w-screen h-screen bg-orange-500' >
+      <div className=' sticky top-0 text-center font-Raleway text-[2rem] text-blue-800 mb-2' >Meet Our Parteners !!</div>
+      <PartenerCard imgUrl={"https://upload.wikimedia.org/wikipedia/commons/c/cd/AIIMS_-New_Delhi%27s_Ward_Block.jpg"} sideTitle={"AIIMS DELHI"} sideContent={"Since its inception in 1956, the All India Institute of Medical Sciences (AIIMS), New Delhi has been India's premier public medical university. The university also harbours India's top hospital.[3] The institute is governed by the AIIMS Act, 1956 and operates autonomously with funds provisioned by the Ministry of Health and Family Welfare, Government of India."}  />
+      <PartenerCard imgUrl={"https://mitc.b-cdn.net/wp-content/uploads/2021/11/20-1.jpg"} sideTitle={"BLK Max"} sideContent={" BLK-Max Super Speciality Hospital is the largest stand-alone private sector hospitals in Delhi and the range of services offered at BLK make the Hospital a force to reckon with in the field of Super Speciality Tertiary Healthcare"}  />
+    </div>
+    
+
+  )
+}
+
+export default Partener
+
+
+
+
+
+import React from 'react'
+
+function PartenerCard({imgUrl , sideTitle ,sideContent}) {
+  return (
+    
+      <div className='   flex w-full h-full  ' >
+
+          <div className=' w-[60%] m-12  rounded-xl ' >
+              <div className=''  ><img className='rounded-xl' src={imgUrl} /></div>
+              
+          </div>
+          <div className=' text-center w-[40%] h-max p-8 bg-white bg-opacity-35 backdrop-blur-sm  -translate-x-[35%] translate-y-[50%] font-Raleway rounded-xl ' ><h1 className='text-3xl' >{sideTitle}</h1><h1>{sideContent}</h1></div>
+      </div>
+    
+  )
+}
+
+export default PartenerCard
+
