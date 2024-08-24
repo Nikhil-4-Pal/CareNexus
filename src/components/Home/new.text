@@ -30,3 +30,9 @@ function Content() {
 }
 
 export default Content;
+
+
+
+ <div className=' absolute backface-hidden rotate-y-180 border-x-2 border-x-black border-y-2 border-y-black text-wrap m-4  flex flex-col justify-center items-center gap-6 rounded-[1.75rem] text-center bg-white w-[28rem] max-h-max p-10 font-Raleway ' >  
+              <h1 className='text-2xl' >{cardcontent}</h1>
+          </div>

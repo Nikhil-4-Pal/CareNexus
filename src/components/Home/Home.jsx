@@ -1,8 +1,8 @@
 import React from 'react'
 import Hero from './Hero'
 import Marquee from './QuickServices/Marquee'
-import Background from './Background'
-
+import ReviewSection from './Review/ReviewSection'
+import Partener from './Partener/Partener'
 
 
 function Home() {
@@ -11,6 +11,8 @@ function Home() {
 
       <Hero />
       <Marquee  />
+      <ReviewSection />
+      <Partener />
     </>
   )
 }

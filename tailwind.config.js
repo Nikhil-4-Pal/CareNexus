@@ -5,6 +5,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],  theme: {
     extend: {
+      rotate: {
+        '30': '30deg',
+        '60': '60deg',
+      },
       fontFamily:{
         primaryRegular:["Regular"],
         primaryMedium : ["Medium"],
@@ -22,9 +26,37 @@ export default {
       animation: {
         blink: 'blink 1s step-start infinite',
       },
+
+      keyframes:{
+        "slide":{
+          from : { transform : "translateX(0)" },
+          to : { transform :"translateX(-100%)" }
+
+
+        }
+      },
+
+      animation :{
+        "slide" :'slide 30s linear infinite'
+      },
+      transitionDuration: {
+        '500': '500ms', 
+      },
+      transitionTimingFunction: {
+        'ease': 'ease', 
+      },
+      /* Add to your CSS or Tailwind config */
+      willchangetransform :{
+        'will-change': "transform"
+      }
+
+
+
       
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-3d')({ legacy: true }),
+  ],
 }
 
