@@ -7,7 +7,7 @@ function Hero() {
   return (
     <div className=' overflow-y-none top-[10%]  w-full  '>
       <Background/>
-      <Blob/>
+  
       <Content/>
       
       

@@ -9,17 +9,24 @@ import Contact from './components/Contact/Contact.jsx'
 
 import SignIn from './components/SignIn/SignIn.jsx'
 import Hospital from './components/Hospital/Hospital.jsx'
+import One from './components/Pageno1/one.jsx'
+import AIIMS from './components/Hospital Details/AIIMS.jsx'
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={ <App /> } >
-      <Route path='/home' element={<Home/>} />
-      <Route path='about' element={<About/>} />
-      <Route path='contact' element={<Contact/>} />
-      <Route path='register' element={<SignIn/>} />
-      <Route path='Hospitals' element={<Hospital/>} />
-    </Route>
+    <>
+      <Route path='/' element={ <App/> } >
+        <Route path='home' element={<Home/>} />
+        <Route path='about' element={<About/>} />
+        <Route path='contact' element={<Contact/>} />
+        <Route path='register' element={<SignIn/>} />
+        <Route path='Hospitals' element={<Hospital/>} />
+        <Route path='/Hospitals/AIIMS' element={<AIIMS/>} />  
+      </Route>
+      
+    </>
+    
   )
 )
 createRoot(document.getElementById('root')).render(
