@@ -17,14 +17,14 @@ export default {
       },
 
       keyframes: {
-        blink: {
+        "blink": {
           '0%': { opacity: '1' },
           '50%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
       },
       animation: {
-        blink: 'blink 1s step-start infinite',
+        "blink": 'blink 1s step-start infinite',
       },
 
       keyframes:{
@@ -34,6 +34,16 @@ export default {
 
 
         }
+      },
+      animation: {
+        "move": 'move 0.6s ease-in-out forwards',
+      },
+      keyframes: {
+        "move": {
+          '0%': { opacity: '0', zIndex: '1' },
+          '50%': { opacity: '1', zIndex: '5' },
+          '100%': { opacity: '1', zIndex: '5' },
+        },
       },
 
       animation :{

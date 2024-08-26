@@ -1,0 +1,90 @@
+import React from 'react'
+import { FaGoogle } from "react-icons/fa";
+import { FaMicrosoft } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import './SignIn.css'
+import './SignIn.js'
+
+function SignIn() {
+
+    let mcontainer = document.getElementsByClassName('container')
+    const handlelogin = () =>{
+        mcontainer.classList.add('work')
+    }
+
+    const handleregister = () =>{
+        mcontainer.classList.remove('work')
+
+
+  return (
+    <div className='  h-screen w-screen flex-col flex justify-center items-center' >
+
+        <div id='container' className=' container min-w-[60%] bg-white relative overflow-hidden shadow-sm shadow-black rounded-xl h-[60%] ' >
+            <div className=' SignUp    opacity-0 left-0 w-[50%] bg-white absolute top-0 h-full transition-all ease-in-out ' >
+                <h1 className=' font-Raleway text-[3rem] text-center ' >Create Account</h1>
+                <form className='flex flex-col items-center justify-center ' >
+                    <div className='  flex gap-3 ' >
+                        <Link className=' inline-flex border-x-[1px] border-y-[1px] border-gray-400 rounded-[20%] justify-center items-center my-1 w-10 h-10 border-solid cursor-pointer' >
+                            <FaGoogle/>
+                        </Link>
+                        <Link className=' inline-flex border-x-[1px] border-y-[1px] border-gray-400 rounded-[20%] justify-center items-center my-1 w-10 h-10 border-solid cursor-pointer' >
+                        <FaMicrosoft/>
+                        </Link>
+                        <Link className=' inline-flex border-x-[1px] border-y-[1px] border-gray-400 rounded-[20%] justify-center items-center my-1 w-10 h-10 border-solid cursor-pointer' >
+                        <FaGithub/>
+                        </Link>
+                        <Link className=' inline-flex border-x-[1px] border-y-[1px] border-gray-400 rounded-[20%] justify-center items-center my-1 w-10 h-10 border-solid cursor-pointer' >
+                        <FaLinkedin/>    
+                        </Link>
+                    </div>
+                    <span>or use your email</span>
+                    <input  className=' bg-gray-200 border-none outline-none my-2 px-2 py-2  rounded-lg w-[80%]  ' type="text" placeholder='Name' /><input className=' bg-gray-200 border-none outline-none my-2 px-2 py-2  rounded-lg w-[80%]  ' type="email" placeholder='Email' /><input className=' bg-gray-200 border-none outline-none my-2 px-2 py-2  rounded-lg w-[80%]  ' type="password" placeholder='Password' />
+                    <button className=' bg-blue-800 text-[1rem] rounded-md py-2 text-white font-semibold px-9 border-x-transparent border-y-transparent mt-2 cursor-pointer  ' >Sign Up</button>
+                </form>
+            </div>
+            <div className=' SignIn  z-[2] left-0 w-[50%] bg-white absolute top-0 h-full transition-all ease-in-out ' >
+            <h1 className='font-Raleway text-[3rem] text-center ' >Sign In</h1>
+                <form className='flex flex-col justify-center items-center ' >
+                    <div className=' flex gap-3 ' >
+                    <Link className='cursor-pointer inline-flex border-x-[1px] border-y-[1px] border-gray-400 rounded-[20%] justify-center items-center my-1 w-10 h-10 border-solid ' >
+                            <FaGoogle/>
+                        </Link>
+                        <Link className='inline-flex border-x-[1px] border-y-[1px] border-gray-400 rounded-[20%] justify-center items-center my-1 w-10 h-10 border-solid cursor-pointer' >
+                        <FaMicrosoft/>
+                        </Link>
+                        <Link className='inline-flex border-x-[1px] border-y-[1px] border-gray-400 rounded-[20%] justify-center items-center my-1 w-10 h-10 border-solid cursor-pointer' >
+                        <FaGithub/>
+                        </Link>
+                        <Link className='inline-flex border-x-[1px] border-y-[1px] border-gray-400 rounded-[20%] justify-center items-center my-1 w-10 h-10 border-solid cursor-pointer' >
+                        <FaLinkedin/>    
+                        </Link>    
+                    </div>
+                    <span>or use your email</span>
+                    <input className=' bg-gray-200 border-none outline-none my-2 px-2 py-2  rounded-lg w-[80%]  ' type="text" placeholder='Name' /><input className=' bg-gray-200 border-none outline-none my-2 px-2 py-2  rounded-lg w-[80%]  '  type="email" placeholder='Email' /><input className=' bg-gray-200 border-none outline-none my-2 px-2 py-2  rounded-lg w-[80%]  ' type="password" placeholder='Password' />
+                    <Link>Forget Password</Link>
+                    <button className=' bg-blue-800 text-[1rem] rounded-md py-2 text-white font-semibold px-9 border-x-transparent border-y-transparent mt-2 cursor-pointer  ' >Sign In</button>
+                </form> 
+            </div>
+            <div className='toggle-container' >
+                <div className='toggle' >
+
+                    <div className='toggle-panel toggle-left ' >
+                        <h1 className='font-Raleway text-[3rem]' >Welcome Back!</h1>
+                        <h1 className='text-lg font-semibold font-mono py-4 ' >Please Login with your personal information</h1>
+                        <button onClick={()=>(container.classList.remove("work"))} id='login' className=' login  bg-blue-800 text-[1rem] rounded-md py-2 text-white font-semibold px-9 border-x-transparent border-y-transparent mt-2 cursor-pointer  ' >Sign In</button>
+                    </div>
+                    <div className='toggle-panel toggle-right ' >
+                        <h1 className=' font-Raleway text-[3rem]' >Hello, Friend!</h1>
+                        <h1 className='text-lg font-semibold font-mono py-4 ' >Register with your personal information</h1>
+                        <button onClick={()=>(container.classList.add("work"))} id='register' className=' register  bg-blue-800 text-[1rem] rounded-md py-2 text-white font-semibold px-9 border-x-transparent border-y-transparent mt-2 cursor-pointer  ' >Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default SignIn
