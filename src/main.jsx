@@ -11,6 +11,7 @@ import SignIn from './components/SignIn/SignIn.jsx'
 import Hospital from './components/Hospital/Hospital.jsx'
 import One from './components/Pageno1/one.jsx'
 import AIIMS from './components/Hospital Details/AIIMS.jsx'
+import Dashboard from './components/Profile/Dashboard.jsx'
 
 
 const router = createBrowserRouter(
@@ -22,7 +23,9 @@ const router = createBrowserRouter(
         <Route path='contact' element={<Contact/>} />
         <Route path='register' element={<SignIn/>} />
         <Route path='Hospitals' element={<Hospital/>} />
-        <Route path='/Hospitals/AIIMS' element={<AIIMS/>} />  
+        <Route path='/Hospitals/AIIMS' element={<AIIMS/>} />
+        <Route path='/profile' element={<Dashboard/>} />
+
       </Route>
       
     </>
