@@ -10,7 +10,7 @@ import Contact from './components/Contact/Contact.jsx'
 import SignIn from './components/SignIn/SignIn.jsx'
 import Hospital from './components/Hospital/Hospital.jsx'
 import One from './components/Pageno1/one.jsx'
-import AIIMS from './components/Hospital Details/AIIMS.jsx'
+import AIIMS from './components/Hospital Appointment/Hospital Details/AIIMS.jsx'
 import Dashboard from './components/Profile/Dashboard.jsx'
 
 

@@ -29,10 +29,6 @@
   }
 
 
-  body{
-    background-color:rgb(255, 255, 255);
-    
-  }
 
   body::selection{
     opacity: 0;

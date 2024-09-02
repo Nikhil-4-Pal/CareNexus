@@ -3,26 +3,26 @@ import Logo from './Logo'
 import {Link} from 'react-router-dom'
 import Dropdown from '../components/Dropdown/Dropdown'
 import DropdownItem from './Dropdown/DropdownItem'
+import { FaChevronDown } from 'react-icons/fa'
+import ButtonDown from './Hospital/ButtonDown'
 
 function Navbar() {
    
     const Items = ["Vacant Beds","Hospitals","Emergencies",]
   return (
-    <div className= ' bg-white bg-opacity-55 backdrop-blur-sm absolute z-[999] mx-auto h-[15%]  flex justify-center items-center justify-between w-full   px-8 ' >
-        <div className=' text-center font-Raleway grid grid-cols-3 gap-4 self-center ' >
-            <Link className=' hover:bg-black hover:text-white p-2 rounded-full border-x-2 border-y-2 border-x-black border-y-black '  to='/home' >Home</Link>
-            <Link className=' hover:bg-black hover:text-white  p-2 rounded-full border-x-2 border-y-2 border-x-black border-y-black '  to='/about' >About</Link>
-            <Link className=' hover:bg-black hover:text-white  p-2 rounded-full border-x-2 border-y-2 border-x-black border-y-black '  to='/contact' >Contact Us</Link>
+    <div className=' grid grid-cols-3  justify-stretch justify-items-center items-center w-full h-max bg-white  ' >
+        <div  className='  justify-self-center text-center font-serif  font-bold  grid grid-cols-3 justify-stretch gap-8 '  > 
+            <Link to="/home" className='active:text-zinc-400 active:border-b-2 border-b-black border-double ' >Home</Link>
+            <Link to="/about" className='active:text-zinc-400 active:border-b-2 border-b-black border-double ' >About</Link>
+            <Link to="/ourteam" className='active:text-zinc-400 active:border-b-2 border-b-black border-double ' >Our Team</Link> 
         </div>
-        <Link to='/home' className=' max-h-20 h-max '  >
-            <Logo/>
-        </Link>
-        <div className='text-center font-Raleway grid grid-cols-3 gap-4 self-center ' >
-            <button className='hover:bg-black hover:text-white rounded-full' ><Dropdown btnText ="Services" content={ <> {Items.map((item)=>(  <DropdownItem key={item} >{item}</DropdownItem>  ))} </>   }  /></button>
-            <Link className='  hover:bg-black hover:text-white p-2 rounded-full border-x-2 border-y-2 border-x-black border-y-black '  to='/team' >Our Team</Link>
-            <Link className='  hover:bg-black hover:text-white p-2 rounded-full border-x-2 border-y-2 border-x-black border-y-black '  to='/register' >Join Us</Link>
+        <div className=' flex justify-center items-center w-full h-max p-6 ' ><Link to="/home" ><Logo/></Link></div>
+        <div  className=' justify-self-center text-center items-center font-serif  font-bold  grid grid-cols-3 justify-stretch gap-8 '  > 
+            <div className=' active:text-zinc-400 active:border-b-2 border-b-black border-double ' ><ButtonDown Name={"Services"} content={Items} /></div>
+            <Link to="/register" className='active:text-zinc-400 active:border-b-2 border-b-black border-double ' >Join Us</Link>
+            <Link to="/contactus" className='active:text-zinc-400 active:border-b-2 border-b-black border-double ' >Contact Us</Link> 
         </div>
-        </div>
+    </div>
   )
 }
 

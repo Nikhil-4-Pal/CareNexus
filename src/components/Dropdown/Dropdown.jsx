@@ -1,6 +1,8 @@
 import React, { useState , useEffect , useRef } from 'react';
 import DropdownBtn from './DropdownBtn';
 import DropdownContent from './DropdownContent';
+import { Link } from 'react-router-dom';
+
 
 function Dropdown({ btnText, content }) {
   const [open, setOpen] = useState(false);
@@ -29,15 +31,14 @@ function Dropdown({ btnText, content }) {
   return (
     <div className="relative">
       <div
-        className="cursor-pointer p-2 rounded-full border-x-2 border-y-2 border-x-black border-y-black"
+        className="cursor-pointer p-2 "
       >
         <DropdownBtn open={open} toggle={toggleDropdown}>
           {btnText}
         </DropdownBtn>
       </div>
-      <DropdownContent open={open}>
-        {content}
-      </DropdownContent>
+      <DropdownContent children={content} open={open} />
+        
     </div>
   );
 }

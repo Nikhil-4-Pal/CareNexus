@@ -1,22 +1,28 @@
-import React from 'react';
-import PrimaryButton from '../QuickServices/Button'; // Assuming PrimaryButton is defined somewhere
+import React, { useState } from 'react';
+import PrimaryButton from '../QuickServices/Button';
 
-const ReviewCard = ({ cardTitle, cardContent, imageSrc, btnName , bgcolor  }) => {
+const ReviewCard = ({ cardTitle, cardContent, imageSrc,Company, Position , bgcolor
+}) => {
+
+  const [showContent , setShowContent] = useState('hidden')
+
+  const handleContentEnter = () =>{
+    setShowContent('')
+  }
+
+  const handleContentLeave = () =>{
+    setShowContent('hidden')
+  }
+  
   return (
-    <div className="  relative w-[28rem] h-[28rem]    ">
-      <div className="  relative w-full h-full transition-transforms will-change-auto transform-style-3d duration-500 ease-in-out  hover:rotate-y-180">
-        
-        <div className={`  absolute w-full h-full backface-hidden flex flex-col justify-center items-center gap-16 rounded-[1.75rem] border-x-2 border-y-2 border-black  ${bgcolor}  p-10 text-center font-Raleway`}>
-          <div className="w-[7rem] h-[7rem] rounded-full border-x-2 border-y-2 border-black overflow-hidden">
-            <img src={imageSrc}  className="w-full h-full object-cover rounded-full" />
-          </div>
-          <h1 className="text-2xl">{cardTitle}</h1>
-     
-        </div>
+    <div  onMouseEnter={handleContentEnter} onMouseLeave={handleContentLeave}  className=' min-w-40 h-max rounded-full bg-white  ' >
+      <div  className={`gap-6  p-3 rounded-full ${bgcolor} flex flex-col items-center`} >
+        <img src={`${imageSrc}`} className=' w-[15%] h-[15%] rounded-full'   />
+        <p className={`  ease-linear  duration-500   Content  ${showContent} text-md font-semibold text-center`}>{cardContent}</p>
+        <div className=' text-center' >
 
-        
-        <div className="absolute w-full h-full rotate-y-180 backface-hidden flex flex-col justify-center items-center gap-6 rounded-[1.75rem] border-x-2 border-y-2 border-black bg-white p-10 text-center font-Raleway">
-          <h1 className="text-2xl">{cardContent}</h1>
+          <h1 className='text-xl font-bold  ' >{cardTitle}</h1>
+          <h1 className=' text-sm font-bold text-gray-400 ' >{Position},{Company}</h1>
         </div>
       </div>
     </div>

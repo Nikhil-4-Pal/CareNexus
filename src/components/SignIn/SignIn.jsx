@@ -1,61 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGooglePlusG, FaFacebookF, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import './SignIn.css'
 const SignIn = () => {
 
-    const container = document.getElementById('container');
+    const [registerindex , setregisterIndex] = useState(0)
+    const [loginindex , setloginIndex] = useState(1)
+
+    const loginConst = ()=>{
+        setloginIndex(1)
+        setregisterIndex(0)
+    }
+
+    const registerConst = ()=>{
+        setloginIndex(0)
+        setregisterIndex(1)
+
+    }
 
   return (
     <div className='wrapper' >
+        <div className={` z-[${loginindex}] transition-all ease-in-out duration-500 login flex flex-col  items-center absolute /*rotate-y-180*/  transform-style-3d  w-[30rem] h-[35rem] bg-white rounded-3xl  `} >
+            <h1 className=' font-Raleway text-2xl pt-6 text-blue-600 ' >Welcome Back !!</h1>
+            <h1 className=' mt-5 ' >use these social media to login to your account</h1>
+            <div className=' mb-5 mt-5 justify-center items-center logo  flex gap-4  ' >
+                <Link className=' border-x-2 border-y-2 rounded-md  border-gray-800 px-2 py-1 ' ><FaGooglePlusG/></Link>
+                <Link className=' border-x-2 border-y-2 rounded-md border-gray-800 px-2 py-1 ' ><FaFacebookF/></Link>
+                <Link className=' border-x-2 border-y-2 rounded-md border-gray-800 px-2 py-1 ' ><FaGithub/></Link>
+                <Link className=' border-x-2 border-y-2 rounded-md border-gray-800 px-2 py-1 ' ><FaLinkedinIn/></Link>
+            </div>
+            <h1>or use your email to login</h1>
+            <form className='  flex flex-col text-xl font-sans font-bold text-white w-[80%] gap-6 mt-8  ' >
+                <input  className=' h-[3rem] px-4 rounded-xl bg-gray-800 outline-none ' placeholder='Name' type="text" name='Name' />
+                <input className='h-[3rem] px-4 rounded-xl bg-gray-800 outline-none ' placeholder='Email' type="email" name='email' />
+                <input className=' h-[3rem] px-4 rounded-xl bg-gray-800 outline-none ' placeholder='Password' type="password" name='password' />
+                <button className=' w-[6rem] h-[3rem] bg-blue-900 rounded-3xl ' >LogIn</button>
+                
+            </form>
+            <Link onClick={registerConst} className=' p-4 text-black ' >New here ? Register First</Link>
 
-        <div className="container" id="container">
-        <div className="form-container sign-up">
-            <form>
-            <h1>Create Account</h1>
-            <div className="social-icons">
-                <Link to="#" className="icon"><FaGooglePlusG /></Link>
-                <Link to="#" className="icon"><FaFacebookF /></Link>
-                <Link to="#" className="icon"><FaGithub /></Link>
-                <Link to="#" className="icon"><FaLinkedinIn /></Link>
-            </div>
-            <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button type="submit">Sign Up</button>
+            <form >
+
             </form>
         </div>
-        <div className="form-container sign-in">
-            <form>
-            <h1>Sign In</h1>
-            <div className="social-icons">
-                <Link to="#" className="icon"><FaGooglePlusG /></Link>
-                <Link to="#" className="icon"><FaFacebookF /></Link>
-                <Link to="#" className="icon"><FaGithub /></Link>
-                <Link to="#" className="icon"><FaLinkedinIn /></Link>
+        <div className={` z-[${registerindex}] register flex flex-col  items-center absolute /*rotate-y-180*/  transform-style-3d  w-[30rem] h-[35rem] bg-white rounded-3xl  `} >
+            <h1 className=' font-Raleway text-2xl pt-6 text-blue-600 ' >Hello !!</h1>
+            <h1 className=' mt-5 ' >use these social media to register your account</h1>
+            <div className=' mb-5 mt-5 justify-center items-center logo  flex gap-4  ' >
+                <Link className=' border-x-2 border-y-2 rounded-md  border-gray-800 px-2 py-1 ' ><FaGooglePlusG/></Link>
+                <Link className=' border-x-2 border-y-2 rounded-md border-gray-800 px-2 py-1 ' ><FaFacebookF/></Link>
+                <Link className=' border-x-2 border-y-2 rounded-md border-gray-800 px-2 py-1 ' ><FaGithub/></Link>
+                <Link className=' border-x-2 border-y-2 rounded-md border-gray-800 px-2 py-1 ' ><FaLinkedinIn/></Link>
             </div>
-            <span>or use your email password</span>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <Link to="#">Forget Your Password?</Link>
-            <button type="submit">Sign In</button>
+            <h1>or use your email to Register</h1>
+            <form className='  flex flex-col text-xl font-sans font-bold text-white w-[80%] gap-6 mt-8  ' >
+                <input  className=' h-[3rem] px-4 rounded-xl bg-gray-800 outline-none ' placeholder='Name' type="text" name='Name' />
+                <input className='h-[3rem] px-4 rounded-xl bg-gray-800 outline-none ' placeholder='Email' type="email" name='email' />
+                <input className=' h-[3rem] px-4 rounded-xl bg-gray-800 outline-none ' placeholder='Password' type="password" name='password' />
+                <button className=' w-[6rem] h-[3rem] bg-blue-900 rounded-3xl ' >Register</button>
+                
             </form>
-        </div>
-        <div className="toggle-container">
-            <div className="toggle">
-            <div className="toggle-panel toggle-left">
-                <h1>Welcome Back!</h1>
-                <p>Enter your personal details to use all of site features</p>
-                <button onClick={(e)=>(container.classList.add("active"))} className="visible " id="login">Sign In</button>
-            </div>
-            <div className="toggle-panel toggle-right">
-                <h1>Hello, Friend!</h1>
-                <p>Register with your personal details to use all of site features</p>
-                <button onClick={(e)=>(container.classList.remove("active"))} className= "visible" id="register">Sign Up</button>
-            </div>
-            </div>
-        </div>
+            <Link onClick={loginConst} className=' p-4 text-black ' >Already registered ?? Login here</Link>
+
+            <form >
+
+            </form>
         </div>
     </div>
   );

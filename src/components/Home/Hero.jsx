@@ -5,9 +5,8 @@ import Background from './Background'
 
 function Hero() {
   return (
-    <div className=' overflow-y-none top-[10%]  w-full  '>
+    <div className='  z-50 overflow-y-none top-[10%]  w-[80%]  '>
       <Background/>
-  
       <Content/>
       
       

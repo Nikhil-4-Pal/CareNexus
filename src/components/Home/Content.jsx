@@ -34,15 +34,15 @@ function CustomTypewriter() {
     }, [charIndex, isDeleting, index]);
 
     return (
-        <div className='  p-4 rounded-3xl max-w-[80%] overflow-hidden text-pretty font-Raleway h-screen font-black leading-[1] tracking-tighter translate-y-[20%] ml-[10%]'>
+        <div className=' z-40 p-4 rounded-3xl max-w-[80%] overflow-hidden text-pretty font-Raleway  font-black leading-[1] tracking-tighter translate-y-[5%] ml-[10%]'>
             <h1 className='text-[450%] text-black '>CareNexus</h1>
-            <h1 className=' text-slate-100 text-[450%]'>helps you</h1>
-            <h1 className='text-[450%] text-slate-100 '>find...</h1>
+            <h1 className=' text-blue-800 text-[450%]'>helps you</h1>
+            <h1 className='text-[450%] text-blue-800 '>find...</h1>
             <div className=' newtext  max-w-max p-3  rounded-full  text-[500%]  text-[black]  font-Raleway  '>
                 {text || 'AND'}
             </div>
-            <div className=' text-slate-100 text-[450%]'>seamlessly and</div>
-            <div className='text-[450%] text-slate-100 '>consistently</div>
+            <div className=' text-blue-800 text-[450%]'>seamlessly and</div>
+            <div className='text-[450%] text-blue-800 '>consistently</div>
         </div>
     );
 }
