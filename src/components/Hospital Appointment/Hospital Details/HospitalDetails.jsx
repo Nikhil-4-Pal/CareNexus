@@ -3,11 +3,11 @@ import React from 'react'
 function HospitalDetails({imgUrl ,Name ,  totalbeds ,totaldoctors ,emergencybeds,ownership , availablebeds , availabledoctors ,availablemergency ,costbed , costicu ,costmedication}) {
   return (
     
-        <div className=' flex flex-col w-[90%] h-[80%] top-[15%] absolute bg-lime-200/85 rounded-2xl ' >
-            <div className=    '  gap-4 flex items-center w-full h-[50%]  rounded-t-xl ' >
-                <div className=' ml-6 w-[40%] h-max ' ><img className='rounded-xl' src={imgUrl} alt="" /></div>
+        <div className=' flex flex-col w-full h-screen  bg-lime-200/85  ' >
+            <div className=    '  gap-4 flex items-center w-full   rounded-t-xl ' >
+                <div className=' ml-6 w-[40%] h-max overflow-none ' ><img className='rounded-xl' src={imgUrl} alt="" /></div>
                 <div className='w-[55%]  h-[90%] rounded-xl' >
-                    <h1 className=' p-4 text-center font-Raleway text-xl ' >{Name}</h1>
+                    <h1 className=' p-4 text-center font-Raleway text-3xl ' >{Name}</h1>
                     <div className='flex items-center justify-center  gap-8     w-[100%] h-[80%] rounded-xl' >
                         <div className='w-[50%] h-[90%] p-4 flex flex-col justify-center leading-10  rounded-xl text-left font-mono font-bold  ' >
                             <h1>Total Beds: {totalbeds} </h1>

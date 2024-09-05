@@ -12,6 +12,11 @@ import Hospital from './components/Hospital/Hospital.jsx'
 import One from './components/Pageno1/one.jsx'
 import AIIMS from './components/Hospital Appointment/Hospital Details/AIIMS.jsx'
 import Dashboard from './components/Profile/Dashboard.jsx'
+import RML from './components/Hospital Appointment/Hospital Details/RML.jsx'
+import Apollo from './components/Hospital Appointment/Hospital Details/Apollo.jsx'
+import Deen_Dayal from './components/Hospital Appointment/Hospital Details/Deen_Dayal.jsx'
+
+
 
 
 const router = createBrowserRouter(
@@ -24,6 +29,10 @@ const router = createBrowserRouter(
         <Route path='register' element={<SignIn/>} />
         <Route path='Hospitals' element={<Hospital/>} />
         <Route path='/Hospitals/AIIMS' element={<AIIMS/>} />
+        <Route path='/Hospitals/RML Hospital' element={<RML/>} />
+        <Route path='/Hospitals/Safdarjung Hospital' element={<AIIMS/>} />
+        <Route path='/Hospitals/Apollo Hospital' element={<Apollo/>} />
+        <Route path='/Hospitals/Fostis' element={<Deen_Dayal/>} />
         <Route path='/profile' element={<Dashboard/>} />
 
       </Route>

@@ -8,19 +8,19 @@ const SignIn = () => {
     const [loginindex , setloginIndex] = useState(1)
 
     const loginConst = ()=>{
-        setloginIndex(1)
-        setregisterIndex(0)
+        setloginIndex(11)
+        setregisterIndex(-1)
     }
 
     const registerConst = ()=>{
-        setloginIndex(0)
-        setregisterIndex(1)
+        setloginIndex(-1)
+        setregisterIndex(11)
 
     }
 
   return (
     <div className='wrapper' >
-        <div className={` z-[${loginindex}] transition-all ease-in-out duration-500 login flex flex-col  items-center absolute /*rotate-y-180*/  transform-style-3d  w-[30rem] h-[35rem] bg-white rounded-3xl  `} >
+        <div className={` z-[${loginindex}]   transition-all ease-in-out duration-500 login flex flex-col  items-center absolute /*rotate-y-180*/  transform-style-3d  w-[30rem] h-[35rem] bg-white rounded-3xl  `} >
             <h1 className=' font-Raleway text-2xl pt-6 text-blue-600 ' >Welcome Back !!</h1>
             <h1 className=' mt-5 ' >use these social media to login to your account</h1>
             <div className=' mb-5 mt-5 justify-center items-center logo  flex gap-4  ' >
@@ -37,7 +37,7 @@ const SignIn = () => {
                 <button className=' w-[6rem] h-[3rem] bg-blue-900 rounded-3xl ' >LogIn</button>
                 
             </form>
-            <Link onClick={registerConst} className=' p-4 text-black ' >New here ? Register First</Link>
+            <button onClick={registerConst} className=' p-4 text-black ' >New here ? Register First</button>
 
             <form >
 
@@ -60,7 +60,7 @@ const SignIn = () => {
                 <button className=' w-[6rem] h-[3rem] bg-blue-900 rounded-3xl ' >Register</button>
                 
             </form>
-            <Link onClick={loginConst} className=' p-4 text-black ' >Already registered ?? Login here</Link>
+            <button onClick={loginConst} className=' p-4 text-black ' >Already registered ?? Login here</button>
 
             <form >
 

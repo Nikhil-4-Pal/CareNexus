@@ -6,31 +6,39 @@ import ButtonDown from './ButtonDown'
 import { CiSearch } from "react-icons/ci";
 import Card from './Card'
 
+const hospitallist = [
+  {Name : "AIIMS" , Bedstatus : "Unavailable" , emergenciesstatus : "Unavailable" , appointmentstatus :"Available" },
+  {Name : "RML Hospital" , Bedstatus : "Available" , emergenciesstatus : "Unavailable" , appointmentstatus :"Available" },
+  {Name : "Safdarjung Hospital" ,Bedstatus : "Available" , emergenciesstatus : "Available" , appointmentstatus :"Available" },
+  {Name : "Deen Dayal Upadhayay Hospital" , Bedstatus : "Available" , emergenciesstatus : "Unavailable" , appointmentstatus :"Unavailable"},
+  {Name : "Apollo Hospital" , Bedstatus : "Available" , emergenciesstatus : "Available" , appointmentstatus :"Available" },
+  {Name : "BLK MAX" , Bedstatus : "Unavailable" , emergenciesstatus : "Available" , appointmentstatus :"Available" },
 
+]
 
 function Table() {
  
   return (
-    <div className='w-full flex justify-center items-center h-screen  bg-sky-700  ' >
+    <div className='w-full flex translate-y-[0%] justify-center items-center h-screen   ' >
 
-      <div className=' flex flex-col overflow-scroll no-scrollbar  items-center absolute Card min-w-[95%] bg-opacity-100  top-[18%] bg-black/90  font-Raleway  rounded-lg h-[80%] ' >
-          <div className=' justify-evenly flex justify-center items-center w-full h-max ' >
+      <div className=' flex flex-col overflow-scroll no-scrollbar  items-center absolute Card w-[90%] bg-opacity-100  top-[0] bg-white font-Raleway  rounded-lg h-screen ' >
+          <div className=' mt-20 flex items-center justify-around w-full ' >
 
-            <div className=' flex justify-evenly  justify-center items-center  rounded-lg  w-max h-max bg-opacity-20 backdrop-blur-sm  top-[0] left-[10]    ' >
+            <div  className=' flex w-[40%] justify-evenly items-center ' >
                 <ButtonDown Name={"Sort"} leftbtn={6} leftcont={3} topbtn={20} topcont={"[200%]"} content={['Name','Distance','Rating']} />
                 <ButtonDown Name={"Filter"} leftbtn={40} leftcont={40} topbtn={20} topcont={"[200%]"} content={['Name','Distance','Rating']} />
             </div>
-            <div className='z-10 w-max h-max flex justify-center items-center  bg-black  rounded-xl opacity-70  focus:opacity-100  ' >
-              <input type="text" className=' focus:outline-none focus:bg-black opacity-70 focus:opacity-100 bg-black/70 text-white cursor-text rounded-md p-1  ' /><button><CiSearch color='white' /></button>
+            <div  >
+            <button className='flex items-center bg-black/70 rounded-xl px-2 '  ><input type="text" className=' focus:outline-none bg-transparent   text-white cursor-text rounded-md p-1  ' /><CiSearch color='white' /></button>
             </div>
           </div>
           <div className='overflow-y-scroll Cards absolute w-full no-scrollbar gap-12 flex flex-col justify-center items-center top-[35%]  z-20 p-6 ' >
-              <Card Name={"AIIMS"} Bedstatus={"Available"} emergenciesstatus={"Notavailable"} appointmentstatus={"Available"} bgcolor={"green-400"} />
-              <Card Name={"AIIMS"} Bedstatus={"Available"} emergenciesstatus={"Notavailable"} appointmentstatus={"Available"} bgcolor={"green-400"} />
-              <Card Name={"AIIMS"} Bedstatus={"Available"} emergenciesstatus={"Notavailable"} appointmentstatus={"Available"} bgcolor={"green-400"} />
-              <Card Name={"AIIMS"} Bedstatus={"Available"} emergenciesstatus={"Notavailable"} appointmentstatus={"Available"} bgcolor={"green-400"} />
-              <Card Name={"AIIMS"} Bedstatus={"Available"} emergenciesstatus={"Notavailable"} appointmentstatus={"Available"} bgcolor={"green-400"} />
-              <Card Name={"AIIMS"} Bedstatus={"Available"} emergenciesstatus={"Notavailable"} appointmentstatus={"Available"} bgcolor={"green-400"} />
+              
+              {hospitallist.map((hospital)=>{
+                return(
+                  <Card Name={hospital.Name} Bedstatus={hospital.Bedstatus} emergenciesstatus={hospital.emergenciesstatus} appointmentstatus={hospital.appointmentstatus} bgcolor={"green-400"} />
+                )
+              })}
 
 
           </div>
