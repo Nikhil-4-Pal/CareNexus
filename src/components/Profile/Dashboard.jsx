@@ -5,6 +5,9 @@ import Timeline from './Timeline'
 import { Link } from 'react-router-dom'
 import Medicalhistory from './Medicalhistory'
 import RelatedArticle from './Article'
+import Transaction from './Transaction'
+import Medicines from '../Medicines/MedicationHistory'
+
 
 
 
@@ -135,10 +138,10 @@ function Dashboard() {
                     <Medicalhistory />
                 </div>
             </div> : null }
-            
+
             { statusarticles ? <div className={`  w-full p-10 h-full articles bg-black/40 text-white text-3xl `} ><RelatedArticle/></div> : null }
-           { statusmedicine ? <div className={`  w-full h-full appointmentdetails `} >ram ram ji</div> : null }
-            { statuspasttransaction ? <div className={`  w-full h-full pasttransaction `} >radhe radhe ji</div> : null }
+           { statusmedicine ? <div className={`  w-full h-full appointmentdetails `} ><Medicines/></div> : null }
+            { statuspasttransaction ? <div className={` overflow-scroll no-scrollbar w-full h-full pasttransaction `} ><Transaction/></div> : null }
         </div>
     </div>
   )
