@@ -1,15 +1,14 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar'
-import { Outlet } from 'react-router-dom'
+import React from 'react';
+import './App.css';
+import OrganizationForm from './OrganizationForm';
 
 function App() {
-  
-  return(
-    <div className='  bg- '>
-      <Navbar />
-      <Outlet />
+  return (
+    <div className="App">
+      <h1>Organization Registration Form</h1>
+      <OrganizationForm />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
