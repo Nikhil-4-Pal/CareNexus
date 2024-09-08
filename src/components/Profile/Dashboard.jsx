@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom'
 import Medicalhistory from './Medicalhistory'
 import RelatedArticle from './Article'
 import Transaction from './Transaction'
-import Medicines from '../Medicines/MedicationHistory'
+import PatientInfo from './PatientInfo'
+import MedicineTable from '../PrimaryTable/MedicineTable'
+
 
 
 
@@ -88,22 +90,7 @@ function Dashboard() {
             
         </div>
         <div className=' w-full h-[90%] ' >
-           { statusinfo ?  <div className={` flex flex-col  gap-8 w-full h-full patiendetails `} >
-            <h1 className=' px-8 pt-8 pb-4 w-full text-3xl font-Raleway text-gray-800 text-center ' >Personal Information</h1>
-            <div className=' font pl-8 personalinfo flex  flex-col gap-6     ' >
-                <div className=' flex  items-center w-full  ' ><h1 className=' w-[15%]  text-xl font-mono font-bold  ' >Patient Id : </h1> <h1 className='text-xl font-mono font-bold' >XXXX81</h1> </div>
-                <div className=' flex  items-center w-full  ' ><h1 className=' w-[15%]  text-xl font-mono font-bold  ' >Patient Name : </h1> <h1 className='text-xl font-mono font-bold' >Nikhil Pal</h1> </div>
-                <div className=' flex  items-center w-full  ' ><h1 className=' w-[15%]  text-xl font-mono font-bold  ' >Age : </h1> <h1 className='text-xl font-mono font-bold' >20</h1> </div>
-                <div className=' flex  items-center w-full  ' ><h1 className=' w-[15%]  text-xl font-mono font-bold  ' >Sex : </h1> <h1 className='text-xl font-mono font-bold' >Male</h1> </div>
-            </div>
-            <h1 className='px-8 py-8  w-full text-3xl font-Raleway text-gray-800 text-center ' >Contact Details</h1>
-            <div className=' font pl-8 personalinfo flex  flex-col gap-6     ' >
-                <div className=' flex  items-center w-full  ' ><h1 className=' w-[15%]  text-xl font-mono font-bold  ' >Mobile No. : </h1> <h1 className='text-xl font-mono font-bold' >XXXX81XXX1</h1> </div>
-                <div className=' flex  items-center w-full  ' ><h1 className=' w-[15%]  text-xl font-mono font-bold  ' >Alt. Mobile No. : </h1> <h1 className='text-xl font-mono font-bold' >XXXXXXX987</h1> </div>
-                <div className=' flex  items-center w-full  ' ><h1 className=' w-[15%]  text-xl font-mono font-bold  ' >Email : </h1> <h1 className='text-xl font-mono font-bold' >xxx@gmail.com</h1> </div>
-                <div className=' flex  items-center w-full  ' ><h1 className=' w-[15%]  text-xl font-mono font-bold  ' >Address : </h1> <h1 className='text-xl font-mono font-bold' >XYZ/05 delhi </h1> </div>
-            </div>  
-           </div> : null }
+           { statusinfo ?  <div className={` flex flex-col  gap-8 w-full h-full patiendetails `} ><PatientInfo /></div> : null }
            { statusappointment ? <div className={` overflow-scroll items-center no-scrollbar p-8 flex flex-col gap-[10%] w-full h-full medicalhistory `} >
                 <div className=' ml-[5%]  w-full  flex gap-8 ' >
                     <div className=' flex w-full gap-8  items-center ' >
@@ -140,7 +127,7 @@ function Dashboard() {
             </div> : null }
 
             { statusarticles ? <div className={`  w-full p-10 h-full articles bg-black/40 text-white text-3xl `} ><RelatedArticle/></div> : null }
-           { statusmedicine ? <div className={`  w-full h-full appointmentdetails `} ><Medicines/></div> : null }
+           { statusmedicine ? <div className={` overflow-scroll no-scrollbar  w-full h-full appointmentdetails `} ><MedicineTable/></div> : null }
             { statuspasttransaction ? <div className={` overflow-scroll no-scrollbar w-full h-full pasttransaction `} ><Transaction/></div> : null }
         </div>
     </div>
