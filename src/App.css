@@ -53,3 +53,15 @@
   box-sizing: border-box;
 }
 
+/* Checkbox and label styling */
+.checkbox-label {
+  display: flex;
+  align-items: center; /* Keeps the checkbox aligned with the text */
+  font-weight: normal; /* Adjust the weight if needed */
+  white-space: nowrap; /* Prevents line breaks */
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 10px; /* Adds space between the checkbox and the label */
+}
+
