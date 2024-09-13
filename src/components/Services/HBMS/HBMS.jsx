@@ -7,6 +7,7 @@ import { RiHospitalFill } from "react-icons/ri";
 import { IoIosPerson } from "react-icons/io";
 import { MdOutlinePayment } from "react-icons/md";
 import { LuRefreshCcw } from "react-icons/lu";
+import WardView from './WardView';
 
 function HBMS() {
 
@@ -24,23 +25,19 @@ function HBMS() {
     setDischarge(false)
     setTransfer(false)
   }
-
   const handledischarge = ()=>{
     setDischarge(true)
     setAdmit(false)
     setTransfer(false)
   }
-
   const handletransfer = ()=>{
     setTransfer(true)
     setAdmit(false)
     setDischarge(false)
   }
-
   const handlereload = ()=>{
     window.location.reload(false)
   }
-
   const handleward = ()=>{
     setWard(true)
     setBill(false)
@@ -87,8 +84,8 @@ function HBMS() {
           <button onClick={handlereports}  className=' flex flex-col items-center active:border-x-2 active:border-y-2 border-black  w-[15%] bg-blue-400 h-max p-2 text-lg font-mono font-bold  ' ><TbReportSearch/>Medical Reports</button>
           <button className=' flex flex-col items-center active:border-x-2 active:border-y-2 border-black  w-[15%] bg-blue-400 h-max p-2 text-lg font-mono font-bold  ' onClick={handlereload}  ><LuRefreshCcw/>Refresh</button>
         </div>
-        <div className=' maincontent w-full h-full bg-slate-500' >
-          {ward ? <div className=' w-full h-full wardview ' >ward </div> : null }
+        <div className=' maincontent w-full h-full ' >
+          {ward ? <div className=' w-full h-full wardview ' ><WardView/> </div> : null }
           {patientlist ? <div className=' w-full h-full wardview ' >patietn </div> : null }
           {bill ? <div className=' w-full h-full wardview ' >bills </div> : null }
           {reports ? <div className=' w-full h-full wardview ' >reposts </div> : null }
