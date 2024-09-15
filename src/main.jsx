@@ -1,8 +1,11 @@
+import React from 'react';
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
+import './style.css';
+
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, ReactDOM } from 'react-router-dom'
 import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
@@ -24,8 +27,7 @@ import HWMS from './components/Services/HWMS/HWMS.jsx'
 import LMS from './components/Services/LMS/LMS.jsx'
 import PHM from './components/Services/PHM/PHM.jsx'
 import PMF from './components/Services/PMF/PMF.jsx'
-
-
+import ContactPage from './ContactPage';
 
 
 
@@ -67,3 +69,9 @@ createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
   </StrictMode>,
 )
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <ContactPage />
+  </React.StrictMode>
+);
+
