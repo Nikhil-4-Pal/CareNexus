@@ -8,6 +8,9 @@ import { IoIosPerson } from "react-icons/io";
 import { MdOutlinePayment } from "react-icons/md";
 import { LuRefreshCcw } from "react-icons/lu";
 import WardView from './WardView';
+import StatusTable from './StatusTable'
+import PatientInfoComp from './PatientInfo';
+import BillingWindow from './BillingWindow';
 
 function HBMS() {
 
@@ -77,7 +80,7 @@ function HBMS() {
         </div>
       </div>
       <div className=' h-full w-[80%] ' >
-        <div className=' p-4 justify-end  flex gap-4 maintop w-full h-[15vh]  ' >
+        <div className=' p-4 justify-end  flex gap-[3%] maintop w-full h-[15vh]  ' >
           <button onClick={handleward}  className=' flex flex-col items-center active:border-x-2 active:border-y-2 border-black  w-[15%] bg-blue-400 h-max p-2 text-lg font-mono font-bold  ' ><RiHospitalFill/>Ward View</button>
           <button onClick={handlepatients}  className=' flex flex-col items-center active:border-x-2 active:border-y-2 border-black  w-[15%] bg-blue-400 h-max p-2 text-lg font-mono font-bold  ' ><IoIosPerson/>Patients</button>
           <button onClick={handlebill}  className=' flex flex-col items-center active:border-x-2 active:border-y-2 border-black  w-[15%] bg-blue-400 h-max p-2 text-lg font-mono font-bold  ' ><MdOutlinePayment/>billings</button>
@@ -85,12 +88,15 @@ function HBMS() {
           <button className=' flex flex-col items-center active:border-x-2 active:border-y-2 border-black  w-[15%] bg-blue-400 h-max p-2 text-lg font-mono font-bold  ' onClick={handlereload}  ><LuRefreshCcw/>Refresh</button>
         </div>
         <div className=' maincontent w-full h-full ' >
-          {ward ? <div className=' w-full h-full wardview ' ><WardView/> </div> : null }
-          {patientlist ? <div className=' w-full h-full wardview ' >patietn </div> : null }
-          {bill ? <div className=' w-full h-full wardview ' >bills </div> : null }
+          {ward ? <div className=' flex w-full h-full wardview ' > 
+            <WardView/>
+             </div> : null }
+          {patientlist ? <div className=' flex justify-center w-full h-full wardview ' ><PatientInfoComp/> </div> : null }
+          {bill ? <div className=' w-full h-full wardview ' ><BillingWindow/> </div> : null }
           {reports ? <div className=' w-full h-full wardview ' >reposts </div> : null }
         </div>
       </div>
+      
     </div>
   )
 }
