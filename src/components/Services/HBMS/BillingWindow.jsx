@@ -20,4 +20,8 @@ function BillingWindow() {
   )
 }
 
+<<<<<<< HEAD
 export default BillingWindow  
+=======
+export default BillingWindow
+>>>>>>> origin/master

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import './App.css';
 import { Outlet } from 'react-router-dom';
@@ -11,5 +12,21 @@ function App() {
     </div>
   );
 }
+=======
+import { useState } from 'react'
+import Navbar from './components/Navbar'
+import { Outlet } from 'react-router-dom'
 
-export default App;
+
+function App() {
+>>>>>>> origin/master
+
+  return(
+    <div className='  bg- '>
+      <Navbar />
+      <Outlet />
+    </div>
+    )
+  }
+
+export default App

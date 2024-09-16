@@ -1,6 +1,10 @@
 import React, { useMemo } from 'react'
 import {useTable} from 'react-table'
+<<<<<<< HEAD
 import PatientInfo from '../../Profile/mock data/PatientInfo'
+=======
+import PatientInfo from '../../Profile/mock data/PatientInfo.json'
+>>>>>>> origin/master
 import { ColumnPatientInfo } from './PatientInfoHeading'
 
 function PatientInfoComp() {

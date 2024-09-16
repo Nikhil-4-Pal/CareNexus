@@ -11,7 +11,10 @@ import WardView from './WardView';
 import StatusTable from './StatusTable'
 import PatientInfoComp from './PatientInfo';
 import BillingWindow from './BillingWindow';
+<<<<<<< HEAD
 import PatientReports from './PatientReports';
+=======
+>>>>>>> origin/master
 
 function HBMS() {
 
@@ -68,6 +71,7 @@ function HBMS() {
   }
 
   return (
+<<<<<<< HEAD
     <div className=' flex w-screen h-full ' >
       <div className='  flex flex-col   items-center h-full w-[20%] bg-white  ' >
         <h1 className=' text-3xl font-bold text-blue-900 pb-8 ' >Bed Queuing</h1>
@@ -77,6 +81,16 @@ function HBMS() {
           <button onClick={handletransfer} className=' text-center  text-md font-mono font-bold active:border-b-2 border-black ' >Transfer</button></div>
         <div className=' buttoncontent bg-white h-full w-full  ' >
           { admit ?  <div className=' admitqueue h-[80vh] overflow-scroll no-scrollbar ' ><AdmissionQueue/></div> : null }
+=======
+    <div className=' flex w-full h-full ' >
+      <div className='  flex flex-col gap-6  items-center h-full w-[20%] bg-white  ' >
+        <h1 className=' text-3xl font-bold text-blue-900 pb-8 ' >Bed Queuing</h1>
+        <div className='button w-full h-max ' ><button onClick={handleadmit} className=' text-center w-[30%] text-md font-mono font-bold active:border-b-2 border-black ' >Admit</button>
+        <button onClick={handledischarge} className='  text-center w-[30%] text-md font-mono font-bold active:border-b-2 border-black ' >Discharge</button>
+        <button onClick={handletransfer} className=' text-center w-[30%] text-md font-mono font-bold active:border-b-2 border-black ' >Transfer</button></div>
+        <div className=' buttoncontent bg-white h-full w-full  ' >
+          { admit ?  <div className=' admitqueue max-h-[80vh] overflow-scroll no-scrollbar ' ><AdmissionQueue/></div> : null }
+>>>>>>> origin/master
           { discharge ? <div className=' max-h-[80vh] overflow-scroll no-scrollbar discharge ' ><PatientDischarge/></div> : null }
           { transfer ? <div className=' max-h-[80vh] min-h-[80vh] overflow-scroll no-scrollbar Transfer ' ><PatientTransfer/></div>: null}
         </div>
@@ -95,7 +109,11 @@ function HBMS() {
              </div> : null }
           {patientlist ? <div className=' flex justify-center w-full h-full wardview ' ><PatientInfoComp/> </div> : null }
           {bill ? <div className=' w-full h-full wardview ' ><BillingWindow/> </div> : null }
+<<<<<<< HEAD
           {reports ? <div className=' w-full h-full wardview ' ><PatientReports/> </div> : null }
+=======
+          {reports ? <div className=' w-full h-full wardview ' >reposts </div> : null }
+>>>>>>> origin/master
         </div>
       </div>
       

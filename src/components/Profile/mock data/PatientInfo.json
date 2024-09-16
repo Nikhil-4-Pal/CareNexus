@@ -17,5 +17,9 @@
 {"Patient_Id":"53-550-7806","full_Name":"Arther Mascall","Sex":"Male","Bed_No":"17"},
 {"Patient_Id":"55-231-9000","full_Name":"Robby McGeouch","Sex":"Male","Bed_No":"18"},
 {"Patient_Id":"38-455-8942","full_Name":"Shelba Reedshaw","Sex":"Female","Bed_No":"19"},
+<<<<<<< HEAD
 {"Patient_Id":"19-145-8013","full_Name":"Shelby Schubuser","Sex":"Male","Bed_No":"20"}]
 
+=======
+{"Patient_Id":"19-145-8013","full_Name":"Shelby Schubuser","Sex":"Male","Bed_No":"20"}]
+>>>>>>> origin/master

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+// src/ContactPage.jsx
+>>>>>>> origin/master
 import React from 'react';
 import ContactForm from './ContactForm';
 import ContactDetails from './ContactDetails';
@@ -16,4 +20,8 @@ const ContactPage = () => {
 };
 
 
+<<<<<<< HEAD
 export default ContactPage;
+=======
+export default ContactPage;
+>>>>>>> origin/master

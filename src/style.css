@@ -14,3 +14,60 @@ body {
   width: 100vw;
   margin: -20px 0 50px;
 }
+/* src/style.css */
+.contact-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #e5f8f8;
+  font-family: Arial, sans-serif;
+}
+
+.form-section {
+  width: 60%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.details-section {
+  width: 35%;
+  padding: 20px;
+  background-color: #0044cc;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-details h2 {
+  margin-bottom: 20px;
+}
+
+.contact-details p {
+  margin-bottom: 10px;
+}

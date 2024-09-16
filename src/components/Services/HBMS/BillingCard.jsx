@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useMemo, useState } from 'react'
 import PatientDetailedBilling from './PatientDetailedBilling'
 import PatientInfo from '../../Profile/mock data/PatientInfo.json'
@@ -40,6 +41,15 @@ function BillingCard({}) {
     </div>
          
     
+=======
+import React from 'react'
+
+function BillingCard() {
+  return (
+    <div className='  h-[30%] w-[95%] bg-white border-b-2 hover:border-gray-200  hover:scale-[1.005] shadow-black ' >
+        
+    </div>
+>>>>>>> origin/master
   )
 }
 

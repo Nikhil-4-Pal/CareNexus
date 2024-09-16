@@ -22,4 +22,8 @@ function Notescard({notename , content1 ,content2 ,content3}) {
   )
 }
 
+<<<<<<< HEAD
 export default Notescard
+=======
+export default Notescard
+>>>>>>> origin/master

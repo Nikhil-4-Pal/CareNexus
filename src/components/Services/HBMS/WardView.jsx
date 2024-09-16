@@ -9,7 +9,11 @@ import BedCard from './BedCard';
 import Popup from 'reactjs-popup';
 import { useList } from './Bedlist';
 import StatusTable from './StatusTable';
+<<<<<<< HEAD
 import PatientInfo from '../../Profile/mock data/PatientInfo.json'
+=======
+
+>>>>>>> origin/master
 
 
 function WardView() {
@@ -45,7 +49,11 @@ function WardView() {
 
 
   return (
+<<<<<<< HEAD
     <div className=' w-screen h-full  ' >
+=======
+    <div className=' w-full h-full  ' >
+>>>>>>> origin/master
         <div className=' wardbuttons flex flex-col gap-8 ' >
             <div className=' flex justify-end gap-9 h-[50%] mr-4  ' >
                 <button className=' flex items-center gap-3 text-lg font-mono font-bold p-4 bg-gray-100 active:border-x-2 active:border-y-2 border-black ' ><MdAssignmentTurnedIn color='blue' />Assign Bed</button>
@@ -100,17 +108,30 @@ function WardView() {
             </div>
         </div>
         <div className=' flex ' >
+<<<<<<< HEAD
         <div className=' pl-[5rem]  grid grid-cols-3 gap-[2rem] w-[90%] wardview overflow-y-scroll no-scrollbar mt-1 bg-white h-[57.5vh]  ' >
             {PatientInfo.map((items)=>{
                 return(
                     <BedCard PatientName={items.full_Name} bednumber={items.Bed_No} ReasonVisit={reason} />
+=======
+        <div className=' w-[80%] wardview overflow-y-scroll no-scrollbar mt-1 bg-yellow-200 h-[64vh]  ' >
+            {bedlist.map((items)=>{
+                return(
+                    <BedCard PatientName={items.Patientname} bednumber={items.Bedno} ReasonVisit={reason} />
+>>>>>>> origin/master
                 )
             })}
         </div>
 
+<<<<<<< HEAD
         <div className='  flex flex-col h-[58vh] bg-blue-100 w-[20%] ' >
         <div className=' heading text-2xl w-full h-max font-semibold font-mono text-center text-blue-900 ' > Bed Status </div>
         <div className=' flex justify-center h-[50%] w-full ' >
+=======
+        <div className='  h-full bg-blue-100 w-[20%] ' >
+        <div className=' heading text-2xl w-full h-[20%] font-semibold font-mono text-center text-blue-900 ' > Bed Status </div>
+        <div className=' flex justify-center h-[80%] w-full ' >
+>>>>>>> origin/master
             <StatusTable/>
         </div>
       </div>
@@ -120,4 +141,8 @@ function WardView() {
   )
 }
 
+<<<<<<< HEAD
 export default WardView 
+=======
+export default WardView
+>>>>>>> origin/master
