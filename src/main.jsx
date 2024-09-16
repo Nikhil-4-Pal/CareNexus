@@ -24,8 +24,8 @@ import HWMS from './components/Services/HWMS/HWMS.jsx'
 import LMS from './components/Services/LMS/LMS.jsx'
 import PHM from './components/Services/PHM/PHM.jsx'
 import PMF from './components/Services/PMF/PMF.jsx'
-
-
+import ContactPage from './ContactPage.jsx'
+import PatientAppointmentForm from './PatientAppointmentForm.jsx'
 
 
 
@@ -36,7 +36,7 @@ const router = createBrowserRouter(
       <Route path='/' element={ <App/> } >
         <Route path='home' element={<Home/>} />
         <Route path='about' element={<About/>} />
-        <Route path='contact' element={<Contact/>} />
+        <Route path='contactus' element={<ContactPage/>} />
         <Route path='register' element={<ToggleBtwSignIn/>} />
         <Route path='Hospitals' element={<Hospital/>} />
         <Route path='/Hospitals/AIIMS' element={<AIIMS/>} />
@@ -54,7 +54,7 @@ const router = createBrowserRouter(
         <Route path='/services/LMS' element={<LMS/>} />
         <Route path='/services/PHM' element={<PHM/>} />
         <Route path='/services/PMF' element={<PMF/>} />
-
+        <Route path='appointment' element={<PatientAppointmentForm/>} />
 
       </Route>
       

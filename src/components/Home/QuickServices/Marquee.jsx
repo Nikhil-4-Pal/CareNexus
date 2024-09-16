@@ -15,7 +15,7 @@ const services = [{cardtitle :"Find Hospitals" ,cardcontent :"Find all the hospi
 ]
 function Marquee() {
   return (
-    <div className=" w-full    mt-[18rem] ">
+    <div className=" w-screen   mt-[18rem] ">
       <div className="text-center font-Raleway text-[2rem] text-blue-800 mb-6">
         Review From Our Happy Customers
       </div>

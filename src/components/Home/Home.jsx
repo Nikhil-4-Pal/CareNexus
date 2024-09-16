@@ -8,7 +8,6 @@ import Partener from './Partener/Partener'
 function Home() {
   return (
     <>
-
       <Hero />
       <Marquee  />
       <ReviewSection />
