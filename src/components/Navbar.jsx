@@ -10,7 +10,7 @@ function Navbar() {
    
     const Items = ["Vacant Beds","Hospitals","Emergencies",]
   return (
-    <div className=' grid grid-cols-3  justify-stretch justify-items-center items-center w-full h-max bg-white  ' >
+    <div className=' grid grid-cols-3  justify-stretch justify-items-center items-center w-screen h-max bg-white  ' >
         <div  className='  justify-self-center text-center font-serif  font-bold  grid grid-cols-3 justify-stretch gap-8 '  > 
             <Link to="/home" className='active:text-zinc-400 active:border-b-2 border-b-black border-double ' >Home</Link>
             <Link to="/about" className='active:text-zinc-400 active:border-b-2 border-b-black border-double ' >About</Link>

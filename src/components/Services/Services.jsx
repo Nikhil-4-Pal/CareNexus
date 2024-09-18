@@ -45,8 +45,8 @@ const servicecard = [
 
 function Services() {
   return (
-    <>
-    <div className=' text-center p-8  ' >
+    <div className='  w-screen h-max flex flex-col items-center whitespace-normal' >
+    <div className=' text-center p-8 w-full ' >
         <h1 className=' w-full capitalize  text-7xl text-blue-950 font-Raleway ' >Our Services for you </h1>
         <h1 className=' w-full capitalize text-4xl text-blue-900 font-Raleway ' >that makes a difference </h1>
     </div>
@@ -61,7 +61,7 @@ function Services() {
         })}
         
     </div>
-    </>
+    </div>
   )
 }
 

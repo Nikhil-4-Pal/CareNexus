@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
-import OrganizationForm from './OrganizationForm';
+import { Outlet } from 'react-router-dom';
+import Navbar from './components/Navbar'
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Organization Registration Form</h1>
-      <OrganizationForm />
+      <Navbar/>
+      <Outlet/>
     </div>
   );
 }

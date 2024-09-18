@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 function ToggleBtwSignIn() {
   return (
-    <div className=' flex justify-evenly items-center  h-[560px] w-[100%] ' >
+    <div className=' flex justify-evenly items-center  h-[560px] w-screen ' >
         <div>
             <Link to="/usersignin" >
                 <button className=' bg-black rounded-2xl w-[12rem] h-max text-white text-2xl p-5 hover:bg-black/80 ' >User</button>

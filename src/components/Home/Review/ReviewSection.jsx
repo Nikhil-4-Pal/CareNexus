@@ -16,7 +16,7 @@ const reviews = [
 
 const ReviewSection = () => {
   return (
-    <div className=" w-full h-[15rem]  py-8 mb-[3rem] ">
+    <div className=" w-screen h-[15rem]  py-8 mb-[3rem] ">
       <div className="text-center font-Raleway text-[2rem] text-blue-800 mb-8">
         Review From Our Happy Customers
       </div>

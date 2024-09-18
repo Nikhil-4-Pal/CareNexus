@@ -3,7 +3,7 @@ import React from 'react'
 function PartenerCard({ bgcolor,imgUrl , sideTitle ,sideContent}) {
   return (
     
-      <div className={` bg-${bgcolor} text-white font-Raleway justify-center items-center   sticky top-0 bg-opacity-100 backdrop-opacity-100 flex bg-gray-900 h-screen w-screen `} >
+      <div className={` bg-${bgcolor} text-white font-Raleway justify-center items-center   sticky top-0 bg-opacity-100 backdrop-opacity-100 flex bg-white h-screen w-screen `} >
 
           <div className='w-[60%] m-12  rounded-xl flex  items-center justify-center '  >
               <img className='rounded-xl' src={imgUrl} alt="" />
