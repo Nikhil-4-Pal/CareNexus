@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-// src/ContactForm.jsx
->>>>>>> origin/master
+
 import React, { useState } from 'react';
 
 const ContactForm = () => {
@@ -35,7 +32,6 @@ const ContactForm = () => {
       <h2>Send your request</h2>
       <form onSubmit={handleSubmit}>
         <input
->>>>>>> origin/master
           type="text"
           name="name"
           placeholder="Name"
@@ -43,10 +39,7 @@ const ContactForm = () => {
           onChange={handleChange}
         />
         <input
-<<<<<<< HEAD
         className=' w-[30rem] h-[3rem] text-md font-sans rounded-md  font-bold focus:outline-none p-[1rem] '
-=======
->>>>>>> origin/master
           type="email"
           name="email"
           placeholder="Email"
@@ -54,10 +47,7 @@ const ContactForm = () => {
           onChange={handleChange}
         />
         <input
-<<<<<<< HEAD
         className=' w-[30rem] h-[3rem] text-md font-sans rounded-md  font-bold focus:outline-none p-[1rem] '
-=======
->>>>>>> origin/master
           type="text"
           name="phone"
           placeholder="Phone"
@@ -65,10 +55,7 @@ const ContactForm = () => {
           onChange={handleChange}
         />
         <input
-<<<<<<< HEAD
         className=' w-[30rem] h-[3rem] text-md font-sans rounded-md  font-bold focus:outline-none p-[1rem] '
-=======
->>>>>>> origin/master
           type="text"
           name="subject"
           placeholder="Subject"
@@ -76,27 +63,20 @@ const ContactForm = () => {
           onChange={handleChange}
         />
         <textarea
-<<<<<<< HEAD
         className=' w-[30rem] h-[3rem] text-md font-sans rounded-md  font-bold focus:outline-none p-[1rem] '
-=======
->>>>>>> origin/master
           name="message"
           placeholder="Message"
           value={formData.message}
           onChange={handleChange}
         />
-<<<<<<< HEAD
         <button  className=' bg-blue-800 text-white h-[2rem] w-[6rem] rounded-lg ' type="submit">Send</button>
-=======
         <button type="submit">Send</button>
->>>>>>> origin/master
       </form>
     </div>
   );
 };
 
 
-<<<<<<< HEAD
 export default ContactForm;
 =======
 export default ContactForm;
