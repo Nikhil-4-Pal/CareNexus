@@ -56,7 +56,7 @@ function Services() {
         
         {servicecard.map((card)=>{
             return(
-                <Link to={card.linktodirect} ><ServiceCard Imgsrc={card.picurl} Title={card.cardtitle} Content={card.cardcontent} /></Link>
+                <Link to={`/CareNexus/${card.linktodirect}`} ><ServiceCard Imgsrc={card.picurl} Title={card.cardtitle} Content={card.cardcontent} /></Link>
             )
         })}
         

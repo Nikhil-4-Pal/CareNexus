@@ -14,7 +14,7 @@ function Card({Name , Bedstatus ,emergenciesstatus ,appointmentstatus , bgcolor 
               </div>
               <div className='w-[50%] flex justify-evenly items-center gap-1  ' >
                   <Link to={Name} ><button className='  bg-blue-800 text-white  rounded-xl font-mono font-bold p-4' >Details</button></Link>
-                  <Link to={`appointment/${Name}`} ><button className='  bg-blue-800 text-white  rounded-xl font-mono font-bold p-4' >Book an appointment</button></Link>
+                  <Link to={`/CareNexus/appointment/${Name}`} ><button className='  bg-blue-800 text-white  rounded-xl font-mono font-bold p-4' >Book an appointment</button></Link>
               </div>
           </div>
         </div>

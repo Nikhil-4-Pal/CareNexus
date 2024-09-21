@@ -7,7 +7,7 @@ function DropdownItem({ children, onClick }) {
       onClick={onClick}
       className="p-2 m-1 w-full rounded-lg cursor-pointer "
     >
-      <Link to={`/${children}`} >{children}</Link>
+      <Link to={`/CareNexus/${children}`} >{children}</Link>
     </div>
   );
 }

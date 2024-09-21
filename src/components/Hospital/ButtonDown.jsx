@@ -46,7 +46,7 @@ function ButtonDown({Name , topbtn ,topcont ,content , leftbtn ,leftcont}) {
                 <div  >
                   <button onClick={handleworking} className={ `z-10 flex gap-2 p-1 items-center justify-center transition-all text-black duration-500  left-${leftbtn} top-${topbtn}  text-[1.2rem] font-sans  border-x-2 border-y-2 border-none hover:bg-black hover:text-white w-24 h-10 rounded-full `} >{Name}{ componentji }</button>
                   <ul className={` ${visibility} ${postn} flex flex-col absolute ease-in-out duration-500  text-center  left-${leftcont}     top-${topcont} bg-gray-100  rounded-md cursor-pointer w-32 h-max   `} >
-                  {content.map((items)=>(<Link to={`/${items}`} ><li className='rounded-md  hover:bg-black hover:bg-opacity-70 hover:text-white w-[100%] font-bold ' >{items}</li></Link>))}
+                  {content.map((items)=>(<Link to={`/CareNexus/${items}`} ><li className='rounded-md  hover:bg-black hover:bg-opacity-70 hover:text-white w-[100%] font-bold ' >{items}</li></Link>))}
                   
                 </ul>
                   

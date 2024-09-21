@@ -29,7 +29,7 @@ function RelatedArticle() {
   return (
     <div className=' w-full h-full overflow-scroll no-scrollbar ' >
         { articles.map((item) =>{
-            <Link className=' text-xl text-white font-Raleway ' to={item.articleLink} >{item.articleName}</Link>
+            <Link className=' text-xl text-white font-Raleway ' to={`/CareNexus/{item.articleLink}`} >{item.articleName}</Link>
         } ) }
     </div>
   )
