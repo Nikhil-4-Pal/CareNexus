@@ -32,7 +32,7 @@ function BillingCard({}) {
               
             </div> : null }
         </div> 
-          )
+          ) 
          })
             
          }

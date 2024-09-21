@@ -14,7 +14,8 @@ import PatientInfo from '../../Profile/mock data/PatientInfo.json'
 
 function WardView() {
     
-    
+    const [search , setSearch] = useState('')
+
 
     const [bedno , setBedno] = useState('')
     const [patient , setPatient] = useState('')
@@ -95,17 +96,33 @@ function WardView() {
                 </div>
                 <div className=' w-[50%] flex justify-end ' >
                     <button className='bg-white pl-2  ' ><FaSearch  /></button>
-                    <input type="text" className=' p-3 font-semibold w-[80%] h-max text-xl focus:outline-none mr-2 ' placeholder=' Search By Patient Name or Bed No. '   />
+                    <input 
+                    value={search}
+                    onChange={(e)=>{
+                        setSearch(e.target.value)
+                    }} type="text" className=' p-3 font-semibold w-[80%] h-max text-xl focus:outline-none mr-2 ' placeholder=' Search By Patient Name or Bed No. '   />
                 </div>
             </div>
         </div>
         <div className=' flex ' >
         <div className=' pl-[5rem]  grid grid-cols-3 gap-[2rem] w-[90%] wardview overflow-y-scroll no-scrollbar mt-1 bg-white h-[57.5vh]  ' >
-            {PatientInfo.map((items)=>{
+           {
+            PatientInfo
+            .filter((items)=>{
+                const searchedTerm = search.toLocaleLowerCase
+                const foundTerm = items.Patient_Id.toLowerCase()
+                const foundBed = items.Bed_No
+                const foundName = items.full_Name.toLowerCase()
+
+                return searchedTerm && foundTerm.startsWith(search)
+            })
+            .map((patientItem)=>{
                 return(
-                    <BedCard PatientName={items.full_Name} bednumber={items.Bed_No} ReasonVisit={reason} />
+                    <BedCard PatientName={patientItem.full_Name} bednumber={patientItem.Bed_No} />
                 )
-            })}
+            })
+           }
+                
         </div>
 
         <div className='  flex flex-col h-[58vh] bg-blue-100 w-[20%] ' >
