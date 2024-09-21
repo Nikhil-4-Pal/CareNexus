@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-// src/ContactDetails.jsx
->>>>>>> origin/master
+
 import React from 'react';
 
 const ContactDetails = () => {
@@ -15,9 +12,5 @@ const ContactDetails = () => {
   );
 };
 
+export default ContactDetails;
 
-<<<<<<< HEAD
-export default ContactDetails;
-=======
-export default ContactDetails;
->>>>>>> origin/master
