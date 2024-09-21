@@ -38,7 +38,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path='/CareNexus' element={ <App/> } >
-        <Route path='home' element={<Home/>} />
+        <Route path='/CareNexus/home' element={<Home/>} />
         <Route path='about' element={<About/>} />
         <Route path='contactus' element={<ContactPage/>} />
         <Route path='register' element={<ToggleBtwSignIn/>} />
