@@ -59,8 +59,7 @@
   ;
 }
 
-body{
-  width: max-content;
-  background-color: #F8F9FA;
-}
 
+body{
+  width:fit-content ;
+}

@@ -1,0 +1,31 @@
+.required {
+    color: red;
+    font-weight: bold;
+  }
+
+  .text-center{
+    text-decoration: underline;
+    margin-bottom: 30px; 
+    
+}
+  /* src/App.css */
+body {
+    font-family: Arial, sans-serif;
+    margin-left: 50px;
+    margin-right: 100px;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdfaf0;
+    margin-left: 50px;
+    margin-right: 80px;
+    border-radius: 5px;
+    border: solid 2.5px;
+  }
+  
+ 

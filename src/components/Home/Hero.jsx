@@ -5,12 +5,14 @@ import Background from './Background'
 
 function Hero() {
   return (
-    <div className='  z-50 overflow-y-none top-[10%]  w-[80%]  '>
-      <Background/>
-      <Content/>
-      
+    <div>
+      <div className=' z-50 overflow-y-none overflow-x-none top-[10%]  w-[100%]  '>
+        <Background/>  
+        <Content/>
+      </div>
       
     </div>
+    
   )
 }
 

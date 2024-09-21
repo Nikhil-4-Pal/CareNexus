@@ -34,7 +34,7 @@ function CustomTypewriter() {
     }, [charIndex, isDeleting, index]);
 
     return (
-        <div className=' z-40 p-4 rounded-3xl max-w-[80%] overflow-hidden text-pretty font-Raleway  font-black leading-[1] tracking-tighter translate-y-[5%] ml-[10%]'>
+        <div className='  text-left  z-50 p-4 rounded-3xl w-screen  overflow-hidden text-pretty font-Raleway  font-black leading-[1] tracking-tighter translate-y-[5%] ml-[10%]'>
             <h1 className='text-[450%] text-black '>CareNexus</h1>
             <h1 className=' text-blue-800 text-[450%]'>helps you</h1>
             <h1 className='text-[450%] text-blue-800 '>find...</h1>

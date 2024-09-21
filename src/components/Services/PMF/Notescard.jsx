@@ -23,3 +23,4 @@ function Notescard({notename , content1 ,content2 ,content3}) {
 }
 
 export default Notescard
+

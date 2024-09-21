@@ -1,24 +1,14 @@
 import React, { useState } from 'react'
 import { MdClear, MdLocalPrintshop } from "react-icons/md";
-
+import { FaSearch } from "react-icons/fa";
 import { FaSave } from "react-icons/fa";
-
+import {  noteslist } from './notes';
 
 
 
 function SOAPeditor() {
 
  
-  let noteslist = []
-  class Notes {
-    constructor(Subject, Objective,Assessment , Plan){
-      this.Subject = Subject
-      this.Assessment = Assessment 
-      this.Plan = Plan
-      this.Objective = Objective
-    }
-  
-  }
   
   
 

@@ -52,7 +52,7 @@ function Services() {
     </div>
     
 
-    <div className=' flex justify-center items-center gap-6 flex-wrap py-8 w-full h-max ' >
+    <div className=' flex justify-center items-center gap-6 flex-wrap py-8 w-screen h-max ' >
         
         {servicecard.map((card)=>{
             return(
