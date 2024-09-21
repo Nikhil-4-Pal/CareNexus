@@ -10,11 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
     "prime-react": "^1.0.0",
-=======
     "jodit-react": "^4.1.2",
->>>>>>> origin/master
     "primereact": "^10.8.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
