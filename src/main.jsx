@@ -5,7 +5,7 @@ import App from './App.jsx'
 import './index.css'
 import './style.css';
 
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, ReactDOM } from 'react-router-dom'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from 'react-router-dom'
 import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
@@ -27,12 +27,9 @@ import HWMS from './components/Services/HWMS/HWMS.jsx'
 import LMS from './components/Services/LMS/LMS.jsx'
 import PHM from './components/Services/PHM/PHM.jsx'
 import PMF from './components/Services/PMF/PMF.jsx'
-<<<<<<< HEAD
+
 import ContactPage from './ContactPage.jsx'
-import PatientAppointmentForm from './PatientAppointmentForm.jsx'
-=======
-import ContactPage from './ContactPage';
->>>>>>> origin/master
+
 
 
 
